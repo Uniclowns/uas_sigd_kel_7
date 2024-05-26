@@ -6,7 +6,7 @@
             @foreach ($places as $place)
                 <div><i class="fa-solid fa-location-dot"></i> {{ $place->nama }}</div>
             @endforeach
-            <a href="{{ route('maps.create') }}" class="bg-yellow-400 px-2 py-6 mt-12 text-white rounded-xl">
+            <a href="{{ route('maps.create') }}" class="bg-yellow-400 px-3 py-4 mt-12 text-white rounded-xl font-bold">
                 Tambah Data Fakultas
             </a>
         </div>
