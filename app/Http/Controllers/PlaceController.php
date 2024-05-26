@@ -9,11 +9,9 @@ class PlaceController extends Controller
 {
     public function index()
     {
-        $place = Place::all();
+        $place = Place::get();
         return view('maps.index', [
-            'page' => 'pemetaan',
-            'title' => 'UAS SIG Dasar',
-            'peta' => $place
+            'places' => $place
         ]);
         
     }
