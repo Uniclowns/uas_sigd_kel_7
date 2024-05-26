@@ -1,13 +1,13 @@
 <html>
 
 <head>
-    @include('head')
+    @include('layouts.head')
 </head>
 
 <body>
     @yield('container')
 
-    @include('script')
+    @include('layouts.script')
 </body>
 
 </html>
