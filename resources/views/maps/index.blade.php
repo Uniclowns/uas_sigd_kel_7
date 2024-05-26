@@ -19,7 +19,7 @@
     <div id="map"></div>
 
     <div class="relative">
-        <a href="{{ route('maps.create') }}">
+        <a href="{{ route('maps.create') }}" class="btn btn-success">
             Tambah Data
         </a>
     </div>
