@@ -100,7 +100,7 @@
     // Menambahkan control layer pada peta
     streets.addTo(map);
 
-    @foreach ($peta as $p)
+    @foreach ($places as $p)
         // Menambahkan point pada peta dan pop up
         var point = L.marker([{{ $p->latitude }}, {{ $p->longitude }}]).addTo(map);
         point.bindPopup("<b>{{ $p->name }}</b><br>{{ $p->asal }}" +
