@@ -3,7 +3,8 @@
 {{-- Tailwindcss --}}
 <script src="https://cdn.tailwindcss.com"></script>
 {{-- Font Awesome --}}
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link href="/style/soft-ui-dashboard-tailwind.css?v=1.0.5" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/62a2570818.js" crossorigin="anonymous"></script>
 <!-- leaflet.js file-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css">
 <style>

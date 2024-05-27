@@ -18,19 +18,23 @@ class PlaceController extends Controller
 
     public function create()
     {
-        
+        $place = Place::get();
+        return view('maps.create', [
+            'places' => $place
+        ]);
     }
 
     public function store(Request $request)
     {
-        $peta = new Peta();
-        $peta->name = $request->input('name');
-        $peta->asal = $request->input('asal');
-        $peta->latitude = $request->input('latitude');
-        $peta->longitude = $request->input('longitude');
-        $peta->save();
+        $validated = $request->validate([
+            'name' => 'required',
+            'latitude' => 'required',
+            'longitude' => 'required'
+        ]);
 
-        return redirect()->back();
+        Place::create($validated);
+
+        return redirect()->route('maps.index');
     }
 
     public function edit()
@@ -46,5 +50,17 @@ class PlaceController extends Controller
     public function delete()
     {
         
+    }
+
+    public function show()
+    {
+        
+    }
+
+    public function menu()
+    {
+        return view('maps.menu', [
+            'places' => Place::get(),
+        ]);
     }
 }

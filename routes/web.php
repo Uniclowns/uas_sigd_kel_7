@@ -15,7 +15,9 @@ use App\Http\Controllers\PlaceController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('maps.index');
 });
 
+
+Route::get('maps/menu', [PlaceController::class, 'menu']);
 Route::resource('maps', PlaceController::class);
