@@ -42,12 +42,12 @@
                             <td class="p-2 font-semibold text-center">
                                 <div class="flex">
                                     <div class="bg-[#4AD989] flex justify-center px-2 py-0.5 rounded-lg mx-2 items-center">
-                                        <a href="/place/{{ $place->id }}/edit" class="bg-[#4AD989] shadow-xl">
+                                        <a href="{{ route('maps.edit', $place) }}" class="bg-[#4AD989] shadow-xl">
                                             <img src="/img/edit.png" alt="">
                                         </a>
                                     </div>
                                     <div class="bg-red-500 flex justify-center px-2 py-0.5 rounded-xl mx-2 items-center">
-                                        <form action="{{ route('place.destroy', $place->id) }}" method="post">
+                                        <form action="{{ route('maps.destroy', $place->id) }}" method="post">
                                             @method('delete')
                                             @csrf
                                             <button class="bg-[#FF0000]"
